@@ -106,7 +106,10 @@ h2 { font-size: clamp(3rem, 6vw, 6rem); }
 .site-footer { background: var(--ink-dark); color: var(--white); padding: 4rem clamp(1.25rem, 7vw, 8rem) 2rem; display: grid; grid-template-columns: 1.7fr 1fr 1fr 1.25fr; gap: 3rem; }
 .footer-brand img { width: 170px; height: auto; filter: brightness(0) invert(1); }.footer-brand p, .footer-column p { opacity: .7; line-height: 1.6; }
 .footer-column a { text-underline-offset: 4px; }
-.footer-affiliation img { display: block; width: min(230px, 100%); height: auto; }
+.footer-badges { display: flex; align-items: center; flex-wrap: wrap; gap: 1.25rem; }
+.footer-affiliation img { display: block; height: auto; }
+.footer-affiliation .federation-badge { width: min(210px, 100%); }
+.footer-affiliation .visit-badge { width: min(150px, 100%); }
 .footer-affiliation a { display: inline-block; transition: transform .2s, opacity .2s; }
 .footer-affiliation a:hover { transform: translateY(-2px); opacity: .9; }
 .footer-column h2 { font: 700 .75rem var(--sans); text-transform: uppercase; letter-spacing: .15em; margin-bottom: 1.3rem; }
