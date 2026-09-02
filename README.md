@@ -15,4 +15,4 @@ The site is designed for GitHub Pages. Keep the repository private while draftin
 - Final logo files
 - Social links
 - Membership details
-- Final selected photography or illustrations
+- Replace placeholder hero photography with final club photography when available
