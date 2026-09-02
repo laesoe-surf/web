@@ -103,9 +103,12 @@ h2 { font-size: clamp(3rem, 6vw, 6rem); }
 .join-copy p:last-of-type { max-width: 650px; line-height: 1.7; font-size: 1.05rem; margin: 2rem 0; }
 .button-light { background: var(--white); color: var(--coral); }
 
-.site-footer { background: var(--ink-dark); color: var(--white); padding: 4rem clamp(1.25rem, 7vw, 8rem) 2rem; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+.site-footer { background: var(--ink-dark); color: var(--white); padding: 4rem clamp(1.25rem, 7vw, 8rem) 2rem; display: grid; grid-template-columns: 1.7fr 1fr 1fr 1.25fr; gap: 3rem; }
 .footer-brand img { width: 170px; height: auto; filter: brightness(0) invert(1); }.footer-brand p, .footer-column p { opacity: .7; line-height: 1.6; }
 .footer-column a { text-underline-offset: 4px; }
+.footer-affiliation img { display: block; width: min(230px, 100%); height: auto; }
+.footer-affiliation a { display: inline-block; transition: transform .2s, opacity .2s; }
+.footer-affiliation a:hover { transform: translateY(-2px); opacity: .9; }
 .footer-column h2 { font: 700 .75rem var(--sans); text-transform: uppercase; letter-spacing: .15em; margin-bottom: 1.3rem; }
 .copyright { grid-column: 1/-1; border-top: 1px solid rgba(255,255,255,.18); padding-top: 1.5rem; margin: 2rem 0 0; font-size: .75rem; opacity: .6; }
 
