@@ -2,6 +2,7 @@ const languageButtons = document.querySelectorAll('[data-lang]');
 const translatable = document.querySelectorAll('[data-da][data-en]');
 const navToggle = document.querySelector('.nav-toggle');
 const navigation = document.querySelector('.site-nav');
+const contactForm = document.getElementById('contact-form');
 
 function setLanguage(language) {
   document.documentElement.lang = language;
@@ -30,4 +31,19 @@ navigation.querySelectorAll('a').forEach((link) => link.addEventListener('click'
 }));
 
 document.getElementById('year').textContent = new Date().getFullYear();
+
+contactForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const formData = new FormData(contactForm);
+  const language = document.documentElement.lang;
+  const subject = language === 'da' ? 'Interesse i Læsø Surf & SUP' : 'Interested in Læsø Surf & SUP';
+  const body = [
+    `${language === 'da' ? 'Navn' : 'Name'}: ${formData.get('name')}`,
+    `${language === 'da' ? 'E-mail' : 'Email'}: ${formData.get('email')}`,
+    '',
+    formData.get('message')
+  ].join('\n');
+  window.location.href = `mailto:hej@laesoesurf.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+});
+
 setLanguage(localStorage.getItem('laesoe-language') || 'da');

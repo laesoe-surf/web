@@ -142,7 +142,22 @@
         <p class="eyebrow" data-da="Vær med fra starten" data-en="Be here from the start">Vær med fra starten</p>
         <h2 data-da="Skal du med på vandet?" data-en="Ready to get on the water?">Skal du med på vandet?</h2>
         <p data-da="Foreningen er under opbygning, og der er plads til både nysgerrige begyndere, erfarne vandfolk og frivillige hænder. Følg med – information om medlemskab og de første aktiviteter kommer snart." data-en="The association is taking shape, with room for curious beginners, experienced water people and helping hands. Follow along – membership details and our first activities are coming soon.">Foreningen er under opbygning, og der er plads til både nysgerrige begyndere, erfarne vandfolk og frivillige hænder. Følg med – information om medlemskab og de første aktiviteter kommer snart.</p>
-        <a class="button button-light" href="mailto:hej@laesoesurf.com?subject=Læsø%20Surf%20%26%20SUP" data-da="Skriv til os" data-en="Email us">Skriv til os</a>
+        <form class="contact-form" id="contact-form">
+          <div class="form-field">
+            <label for="contact-name" data-da="Navn" data-en="Name">Navn</label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="form-field">
+            <label for="contact-email" data-da="E-mail" data-en="Email">E-mail</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="form-field form-field-wide">
+            <label for="contact-message" data-da="Hvad vil du gerne høre mere om?" data-en="What would you like to know more about?">Hvad vil du gerne høre mere om?</label>
+            <textarea id="contact-message" name="message" rows="5" required></textarea>
+          </div>
+          <button class="button button-light form-field-wide" type="submit" data-da="Skriv til os" data-en="Email us">Skriv til os</button>
+          <p class="form-note form-field-wide" data-da="Når du trykker, åbner vi en færdig e-mail i dit mailprogram." data-en="When you submit, we’ll open a ready-to-send email in your email app.">Når du trykker, åbner vi en færdig e-mail i dit mailprogram.</p>
+        </form>
       </div>
     </section>
   </main>
@@ -155,6 +170,8 @@
     <div class="footer-column">
       <h2 data-da="Kontakt" data-en="Contact">Kontakt</h2>
       <p><a href="mailto:hej@laesoesurf.com">hej@laesoesurf.com</a></p>
+      <h2 class="social-heading" data-da="Følg med" data-en="Follow us">Følg med</h2>
+      <p class="social-placeholders"><span>Facebook</span><span>Instagram</span><small data-da="Kommer snart" data-en="Coming soon">Kommer snart</small></p>
     </div>
     <div class="footer-column">
       <h2 data-da="Foreningen" data-en="Association">Foreningen</h2>
