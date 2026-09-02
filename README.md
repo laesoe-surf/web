@@ -13,7 +13,6 @@ The site is designed for GitHub Pages. Keep the repository private while draftin
 ## Content still needed
 
 - Final logo files
-- Contact email and social links
-- CVR number
+- Social links
 - Membership details
 - Final selected photography or illustrations
