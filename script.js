@@ -14,7 +14,10 @@ function setLanguage(language) {
     button.classList.toggle('active', active);
     button.setAttribute('aria-pressed', active.toString());
   });
-  document.title = language === 'da' ? 'Læsø Surf & SUP' : 'Læsø Surf & SUP | Surfing and SUP on Læsø';
+  const contactPage = document.body.classList.contains('contact-page');
+  document.title = contactPage
+    ? (language === 'da' ? 'Kontakt | Læsø Surf & SUP' : 'Contact Us | Læsø Surf & SUP')
+    : (language === 'da' ? 'Læsø Surf & SUP' : 'Læsø Surf & SUP | Surfing and SUP on Læsø');
   localStorage.setItem('laesoe-language', language);
 }
 

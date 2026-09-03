@@ -130,6 +130,19 @@ h2 { font-size: clamp(3rem, 6vw, 6rem); }
 .social-placeholders small { flex-basis: 100%; font-size: .7rem; opacity: .55; }
 .copyright { grid-column: 1/-1; border-top: 1px solid rgba(255,255,255,.18); padding-top: 1.5rem; margin: 2rem 0 0; font-size: .75rem; opacity: .6; }
 
+.contact-hero { min-height: 780px; display: grid; grid-template-columns: 1.05fr .95fr; background: var(--ink-dark); color: var(--white); }
+.contact-image { min-height: 640px; background: linear-gradient(90deg, transparent 70%, var(--ink-dark)), url("assets/goat-surfer.webp") center/cover; }
+.contact-intro { padding: 155px clamp(2rem, 7vw, 7rem) 5rem clamp(2rem, 5vw, 5rem); display: flex; flex-direction: column; justify-content: center; }
+.contact-intro h1 { font-size: clamp(3.25rem, 4.8vw, 5.5rem); }
+.contact-intro > p:not(.eyebrow) { max-width: 630px; margin: 1.4rem 0 0; font-size: 1.05rem; line-height: 1.75; opacity: .86; }
+.contact-section { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(3rem, 9vw, 10rem); align-items: start; background: var(--white); }
+.contact-details h2 { font-size: clamp(2.8rem, 5vw, 5.5rem); }
+.contact-details > p:last-child { margin-top: 2rem; font-weight: 700; }
+.contact-form-dark { margin-top: 0; color: var(--ink); }
+.contact-form-dark .form-field input, .contact-form-dark .form-field textarea { border-color: var(--line); background: var(--foam); color: var(--ink); }
+.contact-form-dark .form-field input:focus, .contact-form-dark .form-field textarea:focus { outline-color: rgba(18,61,73,.2); }
+.contact-form-dark .form-note { color: var(--ink); }
+
 @media (max-width: 850px) {
   .site-header { grid-template-columns: 1fr auto auto; }
   .nav-toggle { display: block; border: 0; background: transparent; padding: 8px; cursor: pointer; }
@@ -143,6 +156,9 @@ h2 { font-size: clamp(3rem, 6vw, 6rem); }
   .intro { grid-template-columns: 45px 1fr; }.section-copy { grid-column: 2; }
   .card-grid { grid-template-columns: 1fr; }.activity-card { min-height: 320px; }.card-icon { margin: 3rem 0; }
   .spots, .join, .safety { grid-template-columns: 1fr; }
+  .contact-hero, .contact-section { grid-template-columns: 1fr; }
+  .contact-image { min-height: 560px; background-image: linear-gradient(0deg, var(--ink-dark), transparent 35%), url("assets/goat-surfer.webp"); }
+  .contact-intro { padding-top: 4rem; }
   .safety-title { position: static; }
   .site-footer { grid-template-columns: 1fr 1fr; }.footer-brand { grid-column: 1/-1; }
 }
@@ -154,6 +170,7 @@ h2 { font-size: clamp(3rem, 6vw, 6rem); }
   .intro { grid-template-columns: 1fr; }.section-kicker { width: 45px; }.section-copy { grid-column: auto; }
   .site-footer { grid-template-columns: 1fr; }.footer-brand { grid-column: auto; }.copyright { grid-column: auto; }
   .contact-form { grid-template-columns: 1fr; }.form-field-wide { grid-column: auto; }
+  .contact-image { min-height: 430px; }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
