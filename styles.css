@@ -101,7 +101,8 @@ h2 { font-size: clamp(3rem, 6vw, 6rem); }
 .join { background: var(--coral); color: var(--white); display: grid; grid-template-columns: 1fr 2fr; gap: clamp(3rem, 9vw, 10rem); align-items: center; }
 .join-stamp { width: min(260px, 70vw); aspect-ratio: 1; border: 2px solid currentColor; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; transform: rotate(-8deg); }
 .join-stamp strong { font: 700 3rem var(--display); }.join-stamp span { font-size: .7rem; letter-spacing: .3em; }
-.join-copy p:last-of-type { max-width: 650px; line-height: 1.7; font-size: 1.05rem; margin: 2rem 0; }
+.join-copy > p:not(.eyebrow) { max-width: 650px; line-height: 1.7; font-size: 1.05rem; margin: 1rem 0; }
+.join-copy h2 + p { margin-top: 2rem; }
 .button-light { background: var(--white); color: var(--coral); }
 .contact-form { max-width: 720px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2.25rem; }
 .form-field { display: grid; gap: .5rem; }
