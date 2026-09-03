@@ -37,6 +37,7 @@ a { color: inherit; }
 .hero-photo::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(8,43,53,.88) 0%, rgba(8,43,53,.63) 38%, rgba(8,43,53,.12) 72%, rgba(8,43,53,.04) 100%), linear-gradient(0deg, rgba(8,43,53,.22), transparent 45%); }
 .hero-photo .sun, .hero-photo .coast-art { display: none; }
 .hero-copy { position: relative; z-index: 4; width: min(650px, 55vw); }
+.hero-copy h1 { font-size: clamp(3.75rem, 7vw, 7rem); }
 .eyebrow { text-transform: uppercase; letter-spacing: .2em; font-size: .72rem; font-weight: 700; margin: 0 0 1.2rem; }
 h1, h2 { font-family: var(--display); letter-spacing: -.04em; line-height: .96; margin: 0; }
 h1 { font-size: clamp(4.25rem, 8.5vw, 8.5rem); }
