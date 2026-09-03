@@ -24,10 +24,10 @@ a { color: inherit; }
 .site-header { height: 78px; display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 1.25rem; padding: 0 clamp(1.25rem, 4vw, 4.5rem); border-bottom: 1px solid rgba(255,255,255,.35); position: absolute; z-index: 10; width: 100%; color: var(--white); }
 .brand { display: inline-flex; align-items: center; text-decoration: none; }
 .brand img { display: block; width: 118px; height: auto; filter: brightness(0) invert(1); }
-.site-nav { justify-self: end; display: flex; align-items: center; gap: clamp(1rem, 2.5vw, 2.4rem); padding: .7rem 1.35rem; border: 1px solid rgba(255,255,255,.16); border-radius: 100px; background: rgba(8,43,53,.34); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); font-size: .85rem; font-weight: 700; white-space: nowrap; }
+.site-nav { justify-self: end; display: flex; align-items: center; gap: clamp(1rem, 2.5vw, 2.4rem); font-size: .85rem; font-weight: 700; white-space: nowrap; }
 .site-nav a { text-decoration: none; }
 .site-nav a:hover { color: var(--coral); }
-.language-switch { justify-self: end; display: flex; gap: .35rem; align-items: center; }
+.language-switch { justify-self: end; display: flex; gap: .35rem; align-items: center; padding: .55rem .8rem; border: 1px solid rgba(255,255,255,.2); border-radius: 100px; background: rgba(8,43,53,.34); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
 .language-switch button { border: 0; background: none; color: currentColor; padding: .35rem; font: 700 .75rem var(--sans); cursor: pointer; opacity: .48; }
 .language-switch button.active { opacity: 1; }
 .nav-toggle { display: none; }
