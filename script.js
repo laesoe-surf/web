@@ -15,27 +15,31 @@ function setLanguage(language) {
     button.setAttribute('aria-pressed', active.toString());
   });
   const contactPage = document.body.classList.contains('contact-page');
+  const waterPage = document.body.classList.contains('water-page');
   document.title = contactPage
     ? (language === 'da' ? 'Kontakt | Læsø Surf & SUP' : 'Contact Us | Læsø Surf & SUP')
-    : (language === 'da' ? 'Læsø Surf & SUP' : 'Læsø Surf & SUP | Surfing and SUP on Læsø');
+    : waterPage
+      ? (language === 'da' ? 'På vandet | Læsø Surf & SUP' : 'Activities | Læsø Surf & SUP')
+      : (language === 'da' ? 'Læsø Surf & SUP' : 'Læsø Surf & SUP | Surfing and SUP on Læsø');
   localStorage.setItem('laesoe-language', language);
 }
 
 languageButtons.forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
 
-navToggle.addEventListener('click', () => {
+navToggle?.addEventListener('click', () => {
   const open = navigation.classList.toggle('open');
   navToggle.setAttribute('aria-expanded', open.toString());
 });
 
-navigation.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+navigation?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
   navigation.classList.remove('open');
   navToggle.setAttribute('aria-expanded', 'false');
 }));
 
-document.getElementById('year').textContent = new Date().getFullYear();
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
 
-contactForm.addEventListener('submit', (event) => {
+contactForm?.addEventListener('submit', (event) => {
   event.preventDefault();
   const formData = new FormData(contactForm);
   const language = document.documentElement.lang;
