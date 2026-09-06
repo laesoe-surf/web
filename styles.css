@@ -43,7 +43,7 @@ h1, h2 { font-family: var(--display); letter-spacing: -.04em; line-height: .96; 
 h1 { font-size: clamp(4.25rem, 8.5vw, 8.5rem); }
 h2 { font-size: clamp(3rem, 6vw, 6rem); }
 .hero-lede { max-width: 560px; line-height: 1.65; font-size: clamp(1rem, 1.5vw, 1.2rem); margin: 2rem 0; }
-.hero-actions { display: flex; align-items: center; gap: 1.75rem; }
+.hero-actions { display: flex; align-items: center; gap: 1.75rem; margin-top: 3rem; }
 .button { display: inline-flex; align-items: center; justify-content: center; padding: 1rem 1.45rem; border-radius: 100px; text-decoration: none; font-weight: 700; transition: transform .2s, background .2s; }
 .button:hover { transform: translateY(-2px); }
 .button-primary { background: var(--coral); color: var(--white); }
@@ -78,9 +78,7 @@ h2 { font-size: clamp(3rem, 6vw, 6rem); }
 .activity-card { min-height: 410px; padding: clamp(1.5rem, 3vw, 3rem); background: var(--ink); display: flex; flex-direction: column; position: relative; }
 .activity-card:hover { background: var(--ink-dark); }
 .card-number { font-size: .75rem; opacity: .6; }
-.card-icon { margin: auto 0; font-family: var(--display); font-size: 5rem; color: var(--sand); }
-.paddle-icon { transform: rotate(-18deg); transform-origin: left; }
-.people-icon { font-size: 2.5rem; letter-spacing: -.25em; }
+.card-image { display: block; width: 100%; aspect-ratio: 4 / 3; margin: 2rem 0 1.75rem; object-fit: cover; border-radius: 12px; }
 .activity-card h3 { font: 700 2rem var(--display); margin: 0 0 .75rem; }
 .activity-card p { line-height: 1.6; margin: 0; max-width: 320px; opacity: .8; }
 
