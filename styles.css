@@ -103,8 +103,8 @@ h2 { font-size: clamp(3rem, 6vw, 6rem); }
 .join-shape { position: absolute; display: block; }
 .join-photo { border: 3px solid rgba(255,255,255,.85); background-repeat: no-repeat; background-size: cover; box-shadow: 0 18px 40px rgba(8,43,53,.14); }
 .join-photo-main { z-index: 4; width: 61%; aspect-ratio: 1; left: 4%; top: 7%; border-radius: 50%; background-image: url("assets/child-sup.webp"); background-position: center 33%; }
-.join-photo-open-water { z-index: 6; width: 40%; aspect-ratio: 1; right: 0; top: 31%; border-radius: 50%; background-image: url("assets/collage-open-water.webp"); background-position: center 48%; }
-.join-photo-sunset { z-index: 3; width: 62%; height: 27%; left: 0; bottom: 3%; border-radius: 100px; background-image: url("assets/collage-sunset.webp"); background-position: center 59%; transform: rotate(3deg); }
+.join-photo-open-water { z-index: 6; width: 40%; aspect-ratio: 1; right: 0; top: 31%; border-radius: 50%; background-image: url("assets/collage-open-water.webp"); background-position: center 46%; }
+.join-photo-sunset { z-index: 3; width: 62%; height: 27%; left: 0; bottom: 3%; border-radius: 100px; background-image: url("assets/collage-sunset.webp"); background-position: center 73%; transform: rotate(3deg); }
 .join-photo-fin { z-index: 7; width: 27%; aspect-ratio: 1; right: 1%; bottom: 1%; border-radius: 50%; background-image: url("assets/collage-fin.webp"); background-position: center 76%; }
 .join-photo-goat { z-index: 5; width: 31%; aspect-ratio: 1; right: 3%; top: 0; border-radius: 38% 62% 48% 52% / 58% 42% 58% 42%; background-image: url("assets/collage-goat.webp"); background-position: 63% center; transform: rotate(4deg); }
 .join-dot { border-radius: 50%; }
