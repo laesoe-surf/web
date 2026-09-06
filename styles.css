@@ -97,8 +97,15 @@ h2 { font-size: clamp(3rem, 6vw, 6rem); }
 .spot-list span { font: 500 .68rem var(--sans); opacity: .65; }
 
 .join { background: var(--coral); color: var(--white); display: grid; grid-template-columns: 1fr 2fr; gap: clamp(3rem, 9vw, 10rem); align-items: center; }
-.join-stamp { width: min(260px, 70vw); aspect-ratio: 1; border: 2px solid currentColor; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; transform: rotate(-8deg); }
-.join-stamp strong { font: 700 3rem var(--display); }.join-stamp span { font-size: .7rem; letter-spacing: .3em; }
+.join-collage { position: relative; width: min(360px, 78vw); aspect-ratio: .9; justify-self: center; }
+.join-shape { position: absolute; display: block; }
+.join-photo { border: 3px solid rgba(255,255,255,.85); background-repeat: no-repeat; background-size: cover; box-shadow: 0 18px 40px rgba(8,43,53,.14); }
+.join-photo-main { width: 68%; aspect-ratio: 1; left: 4%; top: 8%; border-radius: 50%; background-image: url("assets/child-sup.webp"); background-position: center 33%; }
+.join-photo-small { width: 39%; aspect-ratio: 1; right: 1%; bottom: 6%; border-radius: 50%; background-image: url("assets/activity-community.webp"); background-position: 52% center; }
+.join-dot { border-radius: 50%; }
+.join-dot-sand { width: 19%; aspect-ratio: 1; right: 7%; top: 3%; background: var(--sand); }
+.join-dot-blue { width: 13%; aspect-ratio: 1; left: 3%; bottom: 13%; background: var(--ink); }
+.join-pill { width: 39%; height: 13%; right: 0; top: 43%; border-radius: 100px; background: rgba(255,255,255,.92); transform: rotate(-11deg); }
 .join-copy > p:not(.eyebrow) { max-width: 650px; line-height: 1.7; font-size: 1.05rem; margin: 1rem 0; }
 .join-copy h2 + p { margin-top: 2rem; }
 .button-light { background: var(--white); color: var(--coral); }
@@ -177,6 +184,7 @@ h2 { font-size: clamp(3rem, 6vw, 6rem); }
   .intro { grid-template-columns: 45px 1fr; }.section-copy { grid-column: 2; }
   .card-grid { grid-template-columns: 1fr; }.activity-card { min-height: 320px; }.card-icon { margin: 3rem 0; }
   .spots, .join, .safety { grid-template-columns: 1fr; }
+  .join-collage { width: min(330px, 72vw); justify-self: start; }
   .contact-hero, .contact-section { grid-template-columns: 1fr; }
   .contact-image { min-height: 560px; background-image: linear-gradient(0deg, var(--ink-dark), transparent 35%), url("assets/goat-surfer.webp"); }
   .contact-intro { padding-top: 4rem; }
