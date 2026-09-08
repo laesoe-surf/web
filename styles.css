@@ -200,7 +200,7 @@ h2 { font-size: clamp(3rem, 6vw, 6rem); }
 
 @media (max-width: 850px) {
   .site-header { grid-template-columns: 1fr auto auto; }
-  .nav-toggle { display: block; border: 0; background: transparent; padding: 8px; cursor: pointer; }
+  .nav-toggle { display: block; border: 0; background: transparent; color: var(--white); padding: 8px; cursor: pointer; }
   .nav-toggle span:not(.sr-only) { display: block; width: 24px; height: 2px; margin: 5px; background: currentColor; }
   .site-nav { display: none; position: absolute; top: 78px; left: 0; right: 0; transform: none; background: rgba(8,43,53,.97); color: var(--white); padding: 2rem; border: 0; border-radius: 0; flex-direction: column; white-space: normal; border-bottom: 1px solid rgba(255,255,255,.2); }
   .site-nav.open { display: flex; }
