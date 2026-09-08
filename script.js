@@ -3,6 +3,7 @@ const translatable = document.querySelectorAll('[data-da][data-en]');
 const navToggle = document.querySelector('.nav-toggle');
 const navigation = document.querySelector('.site-nav');
 const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
 
 function setLanguage(language) {
   document.documentElement.lang = language;
@@ -16,7 +17,10 @@ function setLanguage(language) {
   });
   const contactPage = document.body.classList.contains('contact-page');
   const waterPage = document.body.classList.contains('water-page');
-  document.title = contactPage
+  const privacyPage = document.querySelector('.privacy-page');
+  document.title = privacyPage
+    ? (language === 'da' ? 'Privatliv | Læsø Surf & SUP' : 'Privacy | Læsø Surf & SUP')
+    : contactPage
     ? (language === 'da' ? 'Kontakt | Læsø Surf & SUP' : 'Contact Us | Læsø Surf & SUP')
     : waterPage
       ? (language === 'da' ? 'På vandet | Læsø Surf & SUP' : 'Activities | Læsø Surf & SUP')
@@ -39,18 +43,40 @@ navigation?.querySelectorAll('a').forEach((link) => link.addEventListener('click
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
 
-contactForm?.addEventListener('submit', (event) => {
+contactForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
-  const formData = new FormData(contactForm);
   const language = document.documentElement.lang;
-  const subject = language === 'da' ? 'Interesse i Læsø Surf & SUP' : 'Interested in Læsø Surf & SUP';
-  const body = [
-    `${language === 'da' ? 'Navn' : 'Name'}: ${formData.get('name')}`,
-    `${language === 'da' ? 'E-mail' : 'Email'}: ${formData.get('email')}`,
-    '',
-    formData.get('message')
-  ].join('\n');
-  window.location.href = `mailto:hej@laesoesurf.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const submitButton = contactForm.querySelector('[type="submit"]');
+  const originalButtonText = submitButton.textContent;
+
+  formStatus.hidden = true;
+  submitButton.disabled = true;
+  submitButton.textContent = language === 'da' ? 'Sender…' : 'Sending…';
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { Accept: 'application/json' }
+    });
+
+    if (!response.ok) throw new Error('Form submission failed');
+
+    contactForm.reset();
+    formStatus.textContent = language === 'da'
+      ? 'Tak for din besked – vi vender tilbage snart.'
+      : 'Thanks for your message — we’ll be in touch soon.';
+    formStatus.classList.remove('is-error');
+  } catch (error) {
+    formStatus.textContent = language === 'da'
+      ? 'Noget gik galt. Prøv igen, eller skriv direkte til hej@laesoesurf.com.'
+      : 'Something went wrong. Please try again, or email hej@laesoesurf.com directly.';
+    formStatus.classList.add('is-error');
+  } finally {
+    formStatus.hidden = false;
+    submitButton.disabled = false;
+    submitButton.textContent = originalButtonText;
+  }
 });
 
 setLanguage(localStorage.getItem('laesoe-language') || 'da');
