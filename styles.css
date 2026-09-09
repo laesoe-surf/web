@@ -138,7 +138,7 @@ h2 { font-size: clamp(3rem, 6vw, 6rem); }
 .contact-form .button:disabled { cursor: wait; opacity: .72; }
 
 .privacy-page { background: var(--foam); min-height: calc(100svh - 80px); padding-top: clamp(7rem, 13vw, 11rem); padding-bottom: clamp(5rem, 10vw, 8rem); }
-.privacy-body .brand img { filter: none; }
+.privacy-body .brand img { filter: brightness(0) saturate(100%) invert(21%) sepia(20%) saturate(1434%) hue-rotate(144deg) brightness(88%) contrast(88%) !important; }
 .privacy-page .privacy-content { max-width: 760px; }
 .privacy-page h1 { font-size: clamp(3.1rem, 7vw, 6.3rem); }
 .privacy-page h2 { margin-top: 3.2rem; font-size: clamp(1.7rem, 3.5vw, 2.5rem); }
