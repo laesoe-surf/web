@@ -204,7 +204,7 @@ h2 { font-size: clamp(3rem, 6vw, 6rem); }
   .nav-toggle span:not(.sr-only) { display: block; width: 24px; height: 2px; margin: 5px; background: currentColor; }
   .site-nav { display: none; position: absolute; top: 78px; left: 0; right: 0; transform: none; background: rgba(8,43,53,.97); color: var(--white); padding: 2rem; border: 0; border-radius: 0; flex-direction: column; white-space: normal; border-bottom: 1px solid rgba(255,255,255,.2); }
   .site-nav.open { display: flex; }
-  .hero { min-height: 760px; align-items: flex-start; padding-top: 145px; }
+  .hero { min-height: 0; height: auto; align-items: flex-start; padding-top: 145px; padding-bottom: 5rem; }
   .hero-copy, html[lang="en"] .hero-copy { width: 100%; }.hero-lede { max-width: 500px; }.sun { width: 44vw; top: 40%; right: -8%; }
   .hero-photo { background-position: 58% center; }
   .dune-back { width: 110%; right: -45%; }.dune-front { width: 125%; right: -45%; }.board { right: 18%; bottom: 20%; }
